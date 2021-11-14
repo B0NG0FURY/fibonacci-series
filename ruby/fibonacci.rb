@@ -1,5 +1,13 @@
 def fibonacci(num)
-  # type your code in here
+  fib = [0, 1]
+  if num === 0 || num === 1
+    return fib[num]
+  end
+  (num - 1).times do
+    sum = fib[0] + fib[1]
+    fib = [fib[1], sum]
+  end
+  fib.last
 end
 
 if __FILE__ == $PROGRAM_NAME
